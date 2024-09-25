@@ -21,11 +21,7 @@ public class Fighting extends Task {
                 && !Players.local().interacting().valid()
                 && !Players.local().inCombat()
                 && Npcs.stream().name("Lizardman shaman").within(8).animation(7152).isEmpty()
-                && !new DodgingSpawns(main).shouldExecute() && !new SafeDistance(main).shouldExecute()
-                && (Players.local().animation() == -1 || Players.local().movementAnimation() == -1)
-                && !new TeleportToHouse(main).shouldExecute()
-                && !new InteractFairy(main).shouldExecute();
-    }
+                && !new DodgingSpawns(main).shouldExecute() && !new SafeDistance(main).shouldExecute();
 
     @Override
     public void execute() {
